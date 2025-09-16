@@ -1,4 +1,10 @@
 body {
+  background-image: url('warm-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
   background-color: #f4f4f4;
   font-family: sans-serif;
   text-align: center;
