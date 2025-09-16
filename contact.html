@@ -19,7 +19,16 @@
 
 <form class="contact-form" action="https://formspree.io/f/xrbavdyd" method="POST">
   <input type="hidden" name="_next" value="https://justthemuscle.github.io/thankyou.html">
-  
+
+  <label for="service">Select a Service:</label><br>
+  <select id="service" name="service" required>
+    <option value="">-- Please choose one --</option>
+    <option value="Moving">Moving</option>
+    <option value="Towing">Towing</option>
+    <option value="Junk Removal">Junk Removal</option>
+    <option value="Window Installation">Window Installation</option>
+    <option value="Other">Other</option>
+  </select><br><br>
 
   <label for="email">Email:</label><br>
   <input type="email" id="email" name="email" required><br><br>
