@@ -6,6 +6,26 @@
 <link rel="icon" href="favicon.png" type="image/png">
 
 </head>
+  <script>
+function calculateQuote() {
+  const service = document.getElementById("service-type").value;
+  const hours = parseFloat(document.getElementById("hours").value);
+  let rate = 0;
+
+  switch (service) {
+    case "Moving": rate = 100; break;
+    case "Towing": rate = 85; break;
+    case "Junk Removal": rate = 75; break;
+    case "Window Installation": rate = 120; break;
+    default: rate = 0;
+  }
+
+  const total = rate * hours;
+  document.getElementById("price-output").textContent = `$${total.toFixed(2)}`;
+  document.getElementById("quote-result").style.display = "block";
+}
+</script>
+
 <body>
 
   <nav>
