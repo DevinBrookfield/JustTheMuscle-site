@@ -6,18 +6,28 @@
 <link rel="icon" href="favicon.png" type="image/png">
 
 </head>
-  <script>
+<script>
 function calculateQuote() {
   const service = document.getElementById("service-type").value;
   const hours = parseFloat(document.getElementById("hours").value);
+  const movers = parseInt(document.getElementById("movers")?.value) || 1;
   let rate = 0;
 
   switch (service) {
-    case "Moving": rate = 100; break;
-    case "Towing": rate = 85; break;
-    case "Junk Removal": rate = 75; break;
-    case "Window Installation": rate = 120; break;
-    default: rate = 0;
+    case "Moving":
+      rate = 30 * movers;
+      break;
+    case "Towing":
+      rate = 85;
+      break;
+    case "Junk Removal":
+      rate = 75;
+      break;
+    case "Window Installation":
+      rate = 120;
+      break;
+    default:
+      rate = 0;
   }
 
   const total = rate * hours;
@@ -73,6 +83,9 @@ function calculateQuote() {
 
   <label for="hours">Estimated Hours of Work:</label><br>
   <input type="number" id="hours" name="hours" min="1" required><br><br>
+  <label for="movers">Number of Movers:</label><br>
+<input type="number" id="movers" name="movers" min="1" required><br><br>
+
 
   <button type="button" class="cta-button" onclick="calculateQuote()">Estimate Price</button>
 </form>
