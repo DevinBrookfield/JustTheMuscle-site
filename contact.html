@@ -38,7 +38,28 @@
 
   <button type="submit" class="cta-button">Send Message</button>
 </form>
+<hr>
+<h2>Get a Quick Estimate</h2>
 
+<form class="contact-form" id="quote-form">
+  <label for="service-type">Select a Service:</label><br>
+  <select id="service-type" name="service-type" required>
+    <option value="">-- Choose a service --</option>
+    <option value="Moving">Moving</option>
+    <option value="Towing">Towing</option>
+    <option value="Junk Removal">Junk Removal</option>
+    <option value="Window Installation">Window Installation</option>
+  </select><br><br>
+
+  <label for="hours">Estimated Hours of Work:</label><br>
+  <input type="number" id="hours" name="hours" min="1" required><br><br>
+
+  <button type="button" class="cta-button" onclick="calculateQuote()">Estimate Price</button>
+</form>
+
+<div id="quote-result" class="contact-box" style="display:none;">
+  <p><strong>Estimated Price:</strong> <span id="price-output"></span></p>
+</div>
 
   <div class="contact-box">
     <p><strong>Phone:</strong> (314) 629-6126</p>
